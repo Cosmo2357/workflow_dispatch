@@ -1,0 +1,25 @@
+name: Manual Trigger with Dummy Question
+
+on:
+  workflow_dispatch:
+    inputs:
+      dummy_question:
+        description: 'Are you ready to proceed? (yes/no)' # ダミーの質問
+        required: true
+        default: 'yes' # デフォルト値として "yes" を設定
+
+jobs:
+  dummy_question_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v3
+
+      - name: Print Dummy Answer
+        run: |
+          if [ "${{ github.event.inputs.dummy_question }}" == "yes" ]; then
+            echo "User is ready to proceed!"
+          else
+            echo "User is not ready to proceed!"
+          fi
