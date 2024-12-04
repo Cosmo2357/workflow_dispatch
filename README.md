@@ -7,7 +7,7 @@ This workflow uses GitHub Actions, meaning it supports remote builds and deploym
 
  is also effective for emergency responses such as rollbacks.
 
-## GUI Elements in the Workflow
+## Exampl GUI Elements in the Workflow
 
 Dropdown Menu: This workflow includes a dropdown menu for selecting the deployment environment. Available options are development, staging, and production. The default value is set to development.
 
@@ -16,7 +16,7 @@ Checkbox (Boolean): You can use a checkbox to enable or disable a feature flag (
 Text Input: Additional tests can be specified through a simple text input field. You can list the tests that should be executed, such as test1, test2, etc.
 
 
-## YAML Code Exampl
+## YAML Code Example
 
 Here is the YAML code that configures the manual trigger with dropdowns, checkboxes, and text inputs:
 ```yaml
